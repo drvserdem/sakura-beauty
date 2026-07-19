@@ -519,7 +519,13 @@
         initDialogs();
         initNewsletter();
         await loadAvailability();
-        if (new URLSearchParams(location.search).get("booking") === "open") showBooking();
+        const query = new URLSearchParams(location.search);
+        if (query.get("booking") === "open") showBooking();
+        if (query.get("admin") === "open") {
+            resetAdmin();
+            openDialog(adminDialog);
+            window.setTimeout(() => $("#adminSecret")?.focus(), 80);
+        }
     }
 
     init();

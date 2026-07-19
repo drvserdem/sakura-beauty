@@ -9,3 +9,12 @@ Farklı telefon ve bilgisayarlardan gelen gerçek randevuların ortak görünmes
 - `ADMIN_SECRET` (yalnızca sizin bileceğiniz güçlü bir yönetici kodu)
 
 Değişkenleri ekledikten sonra Vercel'de yeniden yayınlama yapılmalıdır. Müşteri giriş yapmadan randevu talebi gönderir. Talep önce beklemede görünür; yönetici sayfanın altındaki **Yönetim** bağlantısından onay verdiğinde seçilen tarih ve saat dolu olur.
+
+## Yönetim panelini açma
+
+Canlı sitede yönetim paneline iki şekilde ulaşabilirsiniz:
+
+- Ana sayfanın en altındaki **Yönetim** bağlantısı
+- Doğrudan `https://alan-adiniz/admin.html` adresi
+
+Girişte Vercel'e `ADMIN_SECRET` adıyla kaydettiğiniz yönetici kodunu kullanın.
