@@ -78,8 +78,19 @@ function hasApprovedConflict(appointments, candidate, ignoredId = "") {
 }
 
 module.exports = async function handler(req, res) {
-    if (!configured()) return send(res, 200, { configured: false, occupied: [] });
-    try {
+if (!configured()) {
+    const missing = [
+        "UPSTASH_REDIS_REST_URL",
+        "UPSTASH_REDIS_REST_TOKEN",
+        "ADMIN_SECRET"
+    ].filter((name) => !process.env[name]);
+
+    return send(res, 200, {
+        configured: false,
+        missing,
+        occupied: []
+    });
+}    try {
         if (req.method === "GET") {
             const appointments = await readAppointments();
             const secret = req.headers["x-admin-secret"];
