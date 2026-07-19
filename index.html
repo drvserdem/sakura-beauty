@@ -2,217 +2,102 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Sakura Beauty Studio güzellik, bakım ve estetik hizmetleri."
-    >
-
-    <title>Sakura Beauty Studio</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sakura Beauty Studio; cilt bakımı, kalıcı makyaj, kaş ve kirpik uygulamalarında kişiye özel profesyonel güzellik deneyimi.">
+    <meta name="theme-color" content="#f5d2ca">
+    <title>Sakura Beauty Studio | Güzelliğin Zarif Hali</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-    <main class="page-wrapper">
-
-        <section class="hero">
-
-            <div class="hero-overlay"></div>
-
+    <a class="skip-link" href="#hizmetler">İçeriğe geç</a>
+    <main>
+        <section class="hero" id="anasayfa" aria-label="Sakura Beauty Studio giriş bölümü">
+            <div class="hero-background" aria-hidden="true"></div>
+            <div class="hero-shade" aria-hidden="true"></div>
             <header class="navbar">
-
-                <a href="index.html" class="navbar-logo">
-                    <span class="logo-flower">✿</span>
-
-                    <span class="logo-text">
-                        <strong>SAKURA</strong>
-                        <small>BEAUTY STUDIO</small>
-                    </span>
+                <a href="#anasayfa" class="logo" aria-label="Sakura Beauty Studio ana sayfa">
+                    <span class="logo-flower" aria-hidden="true">✿</span>
+                    <span class="logo-text"><strong>SAKURA</strong><small>BEAUTY STUDIO</small></span>
                 </a>
-
-                <button
-                    class="menu-button"
-                    type="button"
-                    aria-label="Menüyü aç"
-                    aria-expanded="false"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <nav class="navbar-menu">
-                    <a href="#home">Ana Sayfa</a>
-                    <a href="#services">Hizmetler</a>
-                    <a href="#about">Hakkımızda</a>
-                    <a href="#contact">İletişim</a>
-
-                    <a
-                        href="appointment.html"
-                        class="navbar-appointment"
-                    >
-                        Randevu Al
-                    </a>
+                <button class="menu-button" type="button" aria-label="Menüyü aç" aria-expanded="false"><span></span><span></span><span></span></button>
+                <nav class="nav-menu" aria-label="Ana menü">
+                    <a href="#anasayfa" class="active">Ana Sayfa</a><a href="#hizmetler">Hizmetler</a><a href="#hakkimizda">Hakkımızda</a><a href="#yorumlar">Yorumlar</a><a href="#iletisim">İletişim</a>
+                    <button type="button" class="nav-appointment" data-booking-open>Randevu Al</button>
                 </nav>
-
             </header>
-
-            <div class="hero-content" id="home">
-
-                <div class="hero-decoration">
-                    <span></span>
-                    <span class="decoration-flower">✿</span>
-                    <span></span>
-                </div>
-
-                <p class="hero-kicker">
-                    Zarafet • Bakım • Güzellik
-                </p>
-
-                <h1>
-                    <span>SAKURA</span>
-                    <small>BEAUTY STUDIO</small>
-                </h1>
-
-                <p class="hero-description">
-                    Kendinizi özel hissedeceğiniz, güzelliğinize
-                    zarafet katacak profesyonel bakım deneyimi.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="appointment.html"
-                        class="button button-primary"
-                    >
-                        Randevu Al
-                    </a>
-
-                    <a
-                        href="#services"
-                        class="button button-secondary"
-                    >
-                        Hizmetleri İncele
-                    </a>
-
-                </div>
-
+            <div class="hero-copy">
+                <p class="hero-description">Kendinizi özel hissedeceğiniz, güzelliğinize zarafet katacak profesyonel bakım deneyimi.</p>
+                <div class="hero-buttons"><button type="button" class="button primary-button" data-booking-open>Randevu Al</button><a href="#hizmetler" class="button outline-button">Hizmetleri İncele <span aria-hidden="true">→</span></a></div>
             </div>
-
-            <a href="#services" class="scroll-down">
-                <span>Keşfet</span>
-                <div class="scroll-line"></div>
-            </a>
-
+            <div class="social-links" aria-label="Hızlı iletişim"><a href="https://wa.me/905551234567" target="_blank" rel="noreferrer" aria-label="WhatsApp">W</a><a href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">I</a><a href="tel:+902121234567" aria-label="Telefon">☎</a></div>
+            <a href="#hizmetler" class="discover"><span>Keşfet</span><i></i><b aria-hidden="true">⌄</b></a>
+            <div class="petals" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
         </section>
 
-
-        <section class="services-section" id="services">
-
-            <div class="section-heading">
-                <span>GÜZELLİĞİNİZ İÇİN</span>
-                <h2>Özel Bakım Hizmetleri</h2>
-
-                <p>
-                    Profesyonel ekibimiz ve özenle seçilmiş ürünlerimizle
-                    kendinizi yenilenmiş hissedin.
-                </p>
-            </div>
-
+        <section class="section services" id="hizmetler">
+            <div class="section-heading reveal"><span>SAKURA DENEYİMİ</span><h2>Güzelliğinize özel dokunuşlar</h2><p>Her uygulamayı cilt yapınıza, yüz hatlarınıza ve beklentinize göre planlıyor; etkili sonuçları zarif bir deneyimle buluşturuyoruz.</p></div>
             <div class="service-grid">
-
-                <article class="service-card">
-                    <div class="service-icon">✦</div>
-                    <h3>Cilt Bakımı</h3>
-                    <p>
-                        Cilt tipinize özel uygulamalarla daha canlı,
-                        parlak ve sağlıklı bir görünüm.
-                    </p>
-                    <a href="appointment.html">Randevu oluştur</a>
+                <article class="service-card service-card-featured reveal" data-service="Cilt Bakımı">
+                    <div class="service-media"><img src="https://images.pexels.com/photos/29692111/pexels-photo-29692111.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000" alt="Profesyonel cilt bakımı uygulaması" loading="lazy"><span class="service-badge">Çok Tercih Edilen</span></div>
+                    <div class="service-body"><span class="service-number">01</span><h3>Cilt Bakımı</h3><p>Detaylı cilt analizi, arındırma, nem desteği ve kişiye özel bakım protokolü.</p><div class="service-meta"><span>75 dk.</span><strong>₺1.450’den</strong></div><button type="button" class="service-action" data-booking-open data-service-choice="Cilt Bakımı">Randevu seç <span>↗</span></button></div>
                 </article>
-
-                <article class="service-card">
-                    <div class="service-icon">❀</div>
-                    <h3>Kalıcı Makyaj</h3>
-                    <p>
-                        Doğal görünümü koruyan profesyonel kaş,
-                        dudak ve eyeliner uygulamaları.
-                    </p>
-                    <a href="appointment.html">Randevu oluştur</a>
+                <article class="service-card reveal" data-service="Kalıcı Makyaj">
+                    <div class="service-media"><img src="https://images.pexels.com/photos/6135621/pexels-photo-6135621.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000" alt="Profesyonel kaş ve kalıcı makyaj uygulaması" loading="lazy"><span class="service-badge">Doğal Görünüm</span></div>
+                    <div class="service-body"><span class="service-number">02</span><h3>Kalıcı Makyaj</h3><p>Yüz oranlarına uygun pudralama kaş, dudak renklendirme ve dipliner uygulamaları.</p><div class="service-meta"><span>120 dk.</span><strong>₺3.900’den</strong></div><button type="button" class="service-action" data-booking-open data-service-choice="Kalıcı Makyaj">Randevu seç <span>↗</span></button></div>
                 </article>
-
-                <article class="service-card">
-                    <div class="service-icon">✧</div>
-                    <h3>Kirpik ve Kaş</h3>
-                    <p>
-                        Yüz hatlarınıza uygun kirpik lifting,
-                        laminasyon ve kaş tasarımı.
-                    </p>
-                    <a href="appointment.html">Randevu oluştur</a>
+                <article class="service-card reveal" data-service="Kaş ve Kirpik">
+                    <div class="service-media"><img src="https://images.pexels.com/photos/36930354/pexels-photo-36930354.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000" alt="Kirpik lifting ve kaş tasarımı uygulaması" loading="lazy"><span class="service-badge">Zarif Dokunuş</span></div>
+                    <div class="service-body"><span class="service-number">03</span><h3>Kaş &amp; Kirpik</h3><p>Kaş laminasyonu, kirpik lifting ve yüz hatlarınıza özel profesyonel tasarım.</p><div class="service-meta"><span>60 dk.</span><strong>₺1.250’den</strong></div><button type="button" class="service-action" data-booking-open data-service-choice="Kaş ve Kirpik">Randevu seç <span>↗</span></button></div>
                 </article>
-
+                <article class="service-card service-card-compact reveal" data-service="Hydrafacial"><div class="service-compact-icon" aria-hidden="true">✦</div><div class="service-body"><span class="service-number">04</span><h3>Hydrafacial</h3><p>Derinlemesine arındırma, yoğun nem ve ışıltı desteğini tek seansta buluşturan bakım.</p><div class="service-meta"><span>60 dk.</span><strong>₺2.100’den</strong></div><button type="button" class="service-action" data-booking-open data-service-choice="Hydrafacial">Randevu seç <span>↗</span></button></div></article>
+                <article class="service-card service-card-compact reveal" data-service="İpek Kirpik"><div class="service-compact-icon" aria-hidden="true">❀</div><div class="service-body"><span class="service-number">05</span><h3>İpek Kirpik</h3><p>Göz yapınıza özel haritalandırma ile doğal, hacimli ve dengeli kirpik tasarımı.</p><div class="service-meta"><span>90 dk.</span><strong>₺1.850’den</strong></div><button type="button" class="service-action" data-booking-open data-service-choice="İpek Kirpik">Randevu seç <span>↗</span></button></div></article>
+                <article class="service-card service-card-compact service-card-cta reveal"><div class="service-compact-icon" aria-hidden="true">♡</div><div class="service-body"><span class="service-number">06</span><h3>Size Özel Plan</h3><p>Hangi uygulamanın size uygun olduğundan emin değilseniz ücretsiz ön görüşme planlayalım.</p><button type="button" class="service-action" data-booking-open data-service-choice="Ücretsiz Ön Görüşme">Ön görüşme al <span>↗</span></button></div></article>
             </div>
-
         </section>
 
+        <section class="trust-strip" aria-label="Sakura Beauty Studio istatistikleri"><div class="trust-item reveal"><strong data-counter="8">0</strong><span>Yıllık deneyim</span></div><div class="trust-item reveal"><strong data-counter="2500">0</strong><span>Mutlu danışan</span></div><div class="trust-item reveal"><strong data-counter="12">0</strong><span>Profesyonel uygulama</span></div><div class="trust-item reveal"><strong data-counter="98">0</strong><span>Memnuniyet oranı</span></div></section>
 
-        <section class="about-section" id="about">
-
-            <div class="about-content">
-                <span class="about-label">SAKURA DENEYİMİ</span>
-
-                <h2>
-                    Güzelliğin en zarif hali
-                </h2>
-
-                <p>
-                    Sakura Beauty Studio, kişiye özel bakım yaklaşımıyla
-                    modern güzellik uygulamalarını huzurlu ve şık bir
-                    atmosferde buluşturur.
-                </p>
-
-                <a
-                    href="appointment.html"
-                    class="button button-primary"
-                >
-                    Randevunuzu Planlayın
-                </a>
+        <section class="section about" id="hakkimizda">
+            <div class="about-visual reveal"><div class="about-image about-image-main"><img src="https://images.pexels.com/photos/29692111/pexels-photo-29692111.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Sakura Beauty Studio profesyonel bakım deneyimi" loading="lazy"></div><div class="about-seal" aria-hidden="true"><span>SAKURA</span><b>✿</b><small>BEAUTY STUDIO</small></div></div>
+            <div class="about-content reveal">
+                <span>HAKKIMIZDA</span><h2>Her detayda özen, her dokunuşta zarafet.</h2><p>Sakura Beauty Studio; modern güzellik uygulamalarını, güçlü hijyen standartları ve kişiye özel danışmanlık yaklaşımıyla bir araya getiren butik bir bakım stüdyosudur.</p><p>Amacımız yalnızca güzel bir sonuç sunmak değil; kendinizi dinlenmiş, anlaşılmış ve yenilenmiş hissedeceğiniz güvenli bir deneyim yaratmaktır.</p>
+                <div class="about-features"><div><i>01</i><span><strong>Kişiye özel analiz</strong><small>Her işlemden önce ihtiyaç ve beklenti değerlendirmesi.</small></span></div><div><i>02</i><span><strong>Steril uygulama alanı</strong><small>Tek kullanımlık ürünler ve düzenli hijyen protokolü.</small></span></div><div><i>03</i><span><strong>Şeffaf bakım planı</strong><small>İşlem, süre, fiyat ve bakım sonrası süreç önceden paylaşılır.</small></span></div></div>
+                <button type="button" class="button primary-button" data-booking-open>Ücretsiz Ön Görüşme</button>
             </div>
-
-            <div class="about-box">
-                <span>✿</span>
-                <strong>SAKURA</strong>
-                <small>BEAUTY STUDIO</small>
-            </div>
-
         </section>
 
-
-        <section class="contact-section" id="contact">
-
-            <div>
-                <span>BİZE ULAŞIN</span>
-                <h2>Güzelliğiniz için ilk adımı atın.</h2>
-            </div>
-
-            <a
-                href="appointment.html"
-                class="button button-light"
-            >
-                Online Randevu
-            </a>
-
+        <section class="section journey">
+            <div class="section-heading reveal"><span>NASIL İLERLİYORUZ?</span><h2>Randevudan son dokunuşa</h2><p>İlk mesajınızdan bakım sonrası önerilere kadar her adımı sade, şeffaf ve konforlu hâle getiriyoruz.</p></div>
+            <div class="journey-grid"><article class="journey-card reveal"><span>01</span><i aria-hidden="true">✦</i><h3>Randevunuzu seçin</h3><p>Hizmet, tarih ve size uygun boş saati seçerek talebinizi oluşturun.</p></article><article class="journey-card reveal"><span>02</span><i aria-hidden="true">⌁</i><h3>Onayınızı alın</h3><p>Ekibimiz uygunluğu kontrol eder; onaylanan saat yalnızca size ayrılır.</p></article><article class="journey-card reveal"><span>03</span><i aria-hidden="true">❀</i><h3>Bakımınızı yaşayın</h3><p>Kişiye özel uygulamanız hijyenik ve huzurlu bir ortamda gerçekleştirilir.</p></article><article class="journey-card reveal"><span>04</span><i aria-hidden="true">♡</i><h3>Işıltınızı koruyun</h3><p>Bakım sonrası önerileriniz ve gerektiğinde kontrol planınız paylaşılır.</p></article></div>
         </section>
 
+        <section class="section reviews" id="yorumlar">
+            <div class="reviews-intro reveal"><span>DANIŞANLARIMIZ ANLATIYOR</span><h2>Sakura’dan mutlu ayrılanlar</h2><p>Her ziyaretin sonunda aynaya daha iyi hislerle bakmanız bizim için en değerli sonuç.</p><div class="review-controls"><button type="button" data-review-prev aria-label="Önceki yorum">←</button><button type="button" data-review-next aria-label="Sonraki yorum">→</button></div></div>
+            <div class="review-viewport reveal"><div class="review-track"><article class="review-card"><div class="review-stars" aria-label="5 yıldız">★★★★★</div><blockquote>“Cilt bakımından sonra yüzüm ilk kez bu kadar canlı ve dengeli görünüyordu. Süreç boyunca her adımı açıklamaları ayrıca güven verdi.”</blockquote><footer><span>EA</span><div><strong>Elif A.</strong><small>Hydrafacial danışanı</small></div></footer></article><article class="review-card"><div class="review-stars" aria-label="5 yıldız">★★★★★</div><blockquote>“Kaş tasarımım tam istediğim gibi doğal oldu. Ortam çok temiz, ekip çok ilgili ve sonuç gerçekten yüzüme uygun.”</blockquote><footer><span>SB</span><div><strong>Selin B.</strong><small>Kalıcı makyaj danışanı</small></div></footer></article><article class="review-card"><div class="review-stars" aria-label="5 yıldız">★★★★★</div><blockquote>“Kirpik lifting işlemim haftalarca çok güzel kaldı. Randevu saatine sadık olmaları ve bakım önerileri çok profesyoneldi.”</blockquote><footer><span>MD</span><div><strong>Melis D.</strong><small>Kaş &amp; kirpik danışanı</small></div></footer></article></div></div>
+        </section>
+
+        <section class="section faq-section"><div class="faq-intro reveal"><span>MERAK ETTİKLERİNİZ</span><h2>Sık sorulan sorular</h2><p>Randevunuzdan önce bilmek isteyebileceğiniz temel bilgileri burada bulabilirsiniz.</p></div><div class="faq-list reveal"><details open><summary>İlk randevuma makyajlı gelebilir miyim?<span>+</span></summary><p>Cilt ve kaş uygulamalarında analiz süresini kolaylaştırmak için mümkünse makyajsız gelmenizi öneririz. Gerekirse işlem öncesinde profesyonel temizlik yapılır.</p></details><details><summary>Randevu talebim ne zaman kesinleşir?<span>+</span></summary><p>Gönderdiğiniz talep önce “beklemede” durumuna alınır. Ekibimiz onayladığında seçtiğiniz tarih ve saat dolu olarak işaretlenir ve size bilgi verilir.</p></details><details><summary>İşlem öncesinde ücretsiz görüşme yapılıyor mu?<span>+</span></summary><p>Evet. Özellikle kalıcı makyaj ve kapsamlı bakım paketlerinde beklentinizi anlamak için ücretsiz kısa bir ön görüşme planlayabilirsiniz.</p></details><details><summary>Randevumu değiştirmek istersem ne yapmalıyım?<span>+</span></summary><p>En geç 24 saat önce telefon veya WhatsApp üzerinden bize ulaşmanız yeterlidir. Uygun ilk boş saate değişiklik yapılır.</p></details></div></section>
+
+        <section class="booking-banner reveal" id="randevu"><div><span>KENDİNİZE AYIRDIĞINIZ EN GÜZEL SAAT</span><h2>Bakım ritüelinizi bugün planlayın.</h2><p>Size uygun hizmeti ve müsait saati seçin; talebinizi kısa süre içinde onaylayalım.</p></div><button type="button" class="button light-button" data-booking-open>Randevu Oluştur <span>→</span></button></section>
+
+        <section class="section contact" id="iletisim">
+            <div class="contact-copy reveal"><span>BİZE ULAŞIN</span><h2>Sizi Sakura’da ağırlamaktan mutluluk duyarız.</h2><p>Randevu, hizmet detayları ve ücretsiz ön görüşme için bize dilediğiniz kanaldan ulaşabilirsiniz.</p><div class="contact-list"><a href="tel:+902121234567"><i>☎</i><span><small>Telefon</small><strong>+90 (212) 123 45 67</strong></span></a><a href="mailto:merhaba@sakurabeauty.com"><i>✉</i><span><small>E-posta</small><strong>merhaba@sakurabeauty.com</strong></span></a><a href="https://maps.google.com/?q=Nişantaşı+Şişli+İstanbul" target="_blank" rel="noreferrer"><i>⌖</i><span><small>Adres</small><strong>Teşvikiye Mah. Sakura Sok. No:12, Şişli / İstanbul</strong></span></a></div><div class="opening-hours"><h3>Çalışma saatleri</h3><p><span>Pazartesi – Cuma</span><strong>09.00 – 19.00</strong></p><p><span>Cumartesi</span><strong>10.00 – 18.00</strong></p><p><span>Pazar</span><strong>Kapalı</strong></p></div></div>
+            <div class="map-card reveal"><iframe title="Sakura Beauty Studio konumu" src="https://www.google.com/maps?q=Nişantaşı,+Şişli,+İstanbul&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="map-note"><span>✿</span><div><strong>Sakura Beauty Studio</strong><small>Nişantaşı · İstanbul</small></div></div></div>
+        </section>
     </main>
 
+    <footer class="footer"><div class="footer-brand"><a href="#anasayfa" class="logo"><span class="logo-flower">✿</span><span class="logo-text"><strong>SAKURA</strong><small>BEAUTY STUDIO</small></span></a><p>Güzelliğinize zarafet katan kişiye özel bakım deneyimi.</p></div><div class="footer-links"><strong>Hızlı menü</strong><a href="#hizmetler">Hizmetler</a><a href="#hakkimizda">Hakkımızda</a><a href="#yorumlar">Yorumlar</a><a href="#iletisim">İletişim</a></div><div class="footer-links"><strong>Hizmetler</strong><a href="#hizmetler">Cilt Bakımı</a><a href="#hizmetler">Kalıcı Makyaj</a><a href="#hizmetler">Kaş &amp; Kirpik</a><button type="button" data-booking-open>Randevu Al</button></div><div class="footer-newsletter"><strong>Sakura notları</strong><p>Yeni bakımlar ve dönemsel fırsatlardan haberdar olun.</p><form id="newsletterForm"><label class="sr-only" for="newsletterEmail">E-posta</label><input id="newsletterEmail" type="email" placeholder="E-posta adresiniz" required><button type="submit" aria-label="Kaydol">→</button></form></div><div class="footer-bottom"><span>© 2026 Sakura Beauty Studio. Tüm hakları saklıdır.</span><span><a href="#">Gizlilik</a><a href="#">KVKK</a><button type="button" class="admin-link" data-admin-open>Yönetim</button></span></div></footer>
+
+    <a class="whatsapp-float" href="https://wa.me/905551234567" target="_blank" rel="noreferrer" aria-label="WhatsApp üzerinden yazın"><span>W</span><small>Size nasıl yardımcı olabiliriz?</small></a>
+
+    <dialog class="booking-dialog" id="bookingDialog" aria-labelledby="bookingTitle"><div class="dialog-shell"><button type="button" class="dialog-close" data-dialog-close aria-label="Randevu penceresini kapat">×</button><div class="booking-form-side"><div class="dialog-heading"><span>ONLINE RANDEVU</span><h2 id="bookingTitle">Size uygun zamanı seçin</h2><p>Talebiniz onaylandıktan sonra seçtiğiniz saat yalnızca size ayrılır.</p></div>
+        <form id="bookingForm" novalidate><div class="form-grid"><label class="field field-full"><span>Hizmet</span><select id="bookingService" name="service" required><option value="">Hizmet seçin</option><option>Cilt Bakımı</option><option>Kalıcı Makyaj</option><option>Kaş ve Kirpik</option><option>Hydrafacial</option><option>İpek Kirpik</option><option>Ücretsiz Ön Görüşme</option></select><small class="field-error"></small></label><label class="field"><span>Tarih</span><input id="bookingDate" name="date" type="date" required><small class="field-error"></small></label><label class="field"><span>Uzman tercihi</span><select id="bookingSpecialist" name="specialist"><option>Fark etmez</option><option>Selin Uzman</option><option>Elif Uzman</option><option>Melis Uzman</option></select></label></div><fieldset class="time-fieldset"><legend>Uygun saatler</legend><p id="timeHelper">Önce hizmet ve tarih seçin.</p><div class="time-slots" id="timeSlots" aria-live="polite"></div><small class="field-error" id="timeError"></small></fieldset><div class="form-grid personal-grid"><label class="field"><span>Ad Soyad</span><input name="name" type="text" autocomplete="name" placeholder="Adınız Soyadınız" required minlength="3"><small class="field-error"></small></label><label class="field"><span>Telefon</span><input name="phone" type="tel" autocomplete="tel" placeholder="05xx xxx xx xx" required><small class="field-error"></small></label><label class="field field-full"><span>E-posta <em>(isteğe bağlı)</em></span><input name="email" type="email" autocomplete="email" placeholder="ornek@email.com"><small class="field-error"></small></label><label class="field field-full"><span>Notunuz <em>(isteğe bağlı)</em></span><textarea name="note" rows="3" placeholder="Hassasiyet, beklenti veya paylaşmak istediğiniz bir not..."></textarea></label></div><label class="privacy-check"><input name="privacy" type="checkbox" required><span>Kişisel verilerimin randevu talebimin değerlendirilmesi amacıyla kullanılmasını kabul ediyorum.</span></label><input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit" class="button primary-button booking-submit">Randevu Talebi Gönder <span>→</span></button><p class="form-status" id="bookingStatus" role="status"></p></form>
+        <div class="booking-success" id="bookingSuccess" hidden><span class="success-icon">✓</span><h3>Randevu talebiniz alındı.</h3><p>Talebiniz şu an beklemede. Ekibimiz uygunluğu kontrol ederek sizinle iletişime geçecek.</p><div id="successSummary"></div><button type="button" class="button primary-button" data-booking-reset>Yeni Randevu</button></div></div><aside class="booking-summary"><span class="summary-flower">✿</span><small>RANDEVU ÖZETİ</small><h3 id="summaryService">Henüz hizmet seçilmedi</h3><dl><div><dt>Tarih</dt><dd id="summaryDate">—</dd></div><div><dt>Saat</dt><dd id="summaryTime">—</dd></div><div><dt>Süre</dt><dd id="summaryDuration">—</dd></div></dl><p><strong>Bilgilendirme</strong> Randevu talebiniz onaylanana kadar seçilen saat başka taleplere açık kalabilir.</p></aside></div></dialog>
+
+    <dialog class="admin-dialog" id="adminDialog" aria-labelledby="adminTitle"><div class="admin-shell"><button type="button" class="dialog-close" data-admin-close aria-label="Yönetim penceresini kapat">×</button><div class="admin-login" id="adminLogin"><span>SAKURA YÖNETİM</span><h2 id="adminTitle">Randevu yönetimi</h2><p>Bekleyen talepleri görüntülemek ve onaylamak için yönetici kodunuzu girin.</p><form id="adminLoginForm"><label class="field"><span>Yönetici kodu</span><input id="adminSecret" type="password" autocomplete="current-password" required></label><button class="button primary-button" type="submit">Giriş Yap</button><p id="adminLoginStatus" class="form-status" role="status"></p></form><small class="demo-hint">Yerel demo kodu: <strong>2468</strong></small></div><div class="admin-panel" id="adminPanel" hidden><div class="admin-header"><div><span>SAKURA YÖNETİM</span><h2>Randevu talepleri</h2></div><button type="button" class="button outline-button" id="adminLogout">Çıkış</button></div><div class="admin-stats"><div><small>Bekleyen</small><strong id="pendingCount">0</strong></div><div><small>Onaylanan</small><strong id="approvedCount">0</strong></div><div><small>Reddedilen</small><strong id="rejectedCount">0</strong></div></div><div class="admin-toolbar"><div class="admin-filters"><button class="active" type="button" data-admin-filter="all">Tümü</button><button type="button" data-admin-filter="pending">Bekleyen</button><button type="button" data-admin-filter="approved">Onaylanan</button><button type="button" data-admin-filter="rejected">Reddedilen</button></div><button type="button" class="refresh-button" id="refreshAppointments">↻ Yenile</button></div><div class="appointment-list" id="appointmentList"></div></div></div></dialog>
+    <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
     <script src="js/script.js"></script>
 </body>
 </html>
