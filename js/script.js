@@ -505,6 +505,28 @@
         });
     }
 
+
+    function initPremiumMotion() {
+        const navbar = $(".navbar");
+        const hero = $(".hero");
+        let ticking = false;
+        const update = () => {
+            const y = window.scrollY;
+            navbar?.classList.toggle("navbar-scrolled", y > 28);
+            if (hero && window.matchMedia("(min-width: 1051px)").matches) {
+                hero.style.setProperty("--hero-scroll", `${Math.min(y * .035, 16)}px`);
+            }
+            ticking = false;
+        };
+        window.addEventListener("scroll", () => {
+            if (!ticking) {
+                requestAnimationFrame(update);
+                ticking = true;
+            }
+        }, { passive: true });
+        update();
+    }
+
     function initNewsletter() {
         $("#newsletterForm")?.addEventListener("submit", event => { event.preventDefault(); event.currentTarget.reset(); toast("Teşekkürler! Sakura notlarına kaydınız alındı."); });
     }
@@ -513,6 +535,7 @@
         configureDateInput();
         initNavigation();
         initHeroParallax();
+        initPremiumMotion();
         initRevealAndCounters();
         initReviews();
         initFaq();

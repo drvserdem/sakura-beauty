@@ -39,7 +39,10 @@ img { display: block; max-width: 100%; }
 /* HERO */
 .hero { position: relative; isolation: isolate; width: calc(100% - 28px); min-height: calc(100svh - 28px); margin: 14px; overflow: hidden; border-radius: 34px; background: #f6c8bd; box-shadow: 0 25px 65px rgba(105, 51, 46, .2); }
 .hero-background { position: absolute; inset: 0; z-index: -3; background-image: url("../images/hero-sakura.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; transform: scale(1.015); animation: backgroundReveal 1.5s ease both; transition: transform .5s ease-out; }
-.hero-shade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(255,239,233,.4) 0%, rgba(255,239,233,.05) 43%, rgba(255,239,233,.06) 100%); }
+.hero-shade { position: absolute; inset: 0; z-index: -2; background:
+    radial-gradient(circle at 18% 52%, rgba(255,250,247,.92) 0, rgba(255,244,240,.62) 25%, transparent 48%),
+    linear-gradient(90deg, rgba(73,32,29,.12) 0%, rgba(255,239,233,.02) 48%, rgba(74,33,30,.14) 100%); }
+.hero::after { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: linear-gradient(to bottom, rgba(255,255,255,.08), transparent 38%, rgba(69,28,25,.1)); }
 .navbar { position: relative; z-index: 40; min-height: 100px; padding: 24px 46px; display: flex; align-items: center; justify-content: space-between; }
 .logo { display: flex; align-items: center; gap: 12px; color: var(--rose-900); }
 .logo-flower { font-size: 38px; line-height: 1; animation: logoFloat 4s ease-in-out infinite; }
@@ -54,9 +57,17 @@ img { display: block; max-width: 100%; }
 .nav-appointment:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(100,46,41,.35); }
 .menu-button { display: none; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.78); }
 .menu-button span { display: block; width: 19px; height: 1px; margin: 5px auto; background: var(--rose-900); transition: .3s ease; }
-.hero-copy { position: absolute; z-index: 15; top: 56%; left: 9%; width: min(360px, 28vw); transform: translateY(-50%); animation: copyReveal 1.2s .2s ease both; }
-.hero-description { font-family: var(--serif); font-size: clamp(21px, 1.65vw, 29px); line-height: 1.55; color: #71463f; text-shadow: 0 3px 15px rgba(255,255,255,.95); }
-.hero-buttons { margin-top: 29px; display: flex; gap: 12px; }
+.hero-copy { position: absolute; z-index: 15; top: 55%; left: 8%; width: min(560px, 42vw); padding: 34px 36px 32px; transform: translateY(-50%); animation: copyReveal 1.2s .2s ease both; border: 1px solid rgba(255,255,255,.52); border-radius: 30px; background: linear-gradient(135deg, rgba(255,250,248,.78), rgba(255,245,241,.48)); backdrop-filter: blur(14px) saturate(1.08); box-shadow: 0 24px 55px rgba(90,42,38,.16), inset 0 1px rgba(255,255,255,.72); }
+.hero-signature { display: inline-grid; gap: 1px; margin-bottom: 19px; color: #6f3934; transform: rotate(-1deg); transform-origin: left center; }
+.hero-signature span { font-family: var(--serif); font-size: 16px; font-style: italic; letter-spacing: .8px; opacity: .76; }
+.hero-signature strong { font-family: var(--serif); font-size: clamp(25px, 2vw, 34px); font-weight: 500; line-height: 1; letter-spacing: .3px; }
+.hero-signature i { width: 100%; height: 1px; margin-top: 8px; background: linear-gradient(90deg, #9d5b54, transparent); transform: scaleX(0); transform-origin: left; animation: signatureLine 1s 1s ease forwards; }
+.hero-kicker { margin-bottom: 11px; color: #9b554e; font-size: 10px; font-weight: 700; letter-spacing: 3.2px; text-transform: uppercase; }
+.hero-copy h1 { font-family: var(--serif); font-size: clamp(45px, 4.4vw, 76px); font-weight: 500; line-height: .96; color: #5d302c; letter-spacing: -.035em; }
+.hero-copy h1 em { font-weight: 500; color: #9b554e; }
+.hero-description { max-width: 42ch; margin-top: 20px; font-family: var(--sans); font-size: clamp(13px, 1vw, 16px); font-weight: 500; line-height: 1.75; color: #694944; text-shadow: 0 3px 15px rgba(255,255,255,.95); }
+.hero-buttons { margin-top: 25px; display: flex; gap: 12px; }
+.hero-trust { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(120,69,63,.18); display: flex; flex-wrap: wrap; gap: 16px; color: #78534e; font-size: 9px; font-weight: 600; letter-spacing: .4px; }
 .button { min-height: 50px; padding: 14px 24px; border: 1px solid transparent; border-radius: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 10px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; transition: transform .3s ease, box-shadow .3s ease, color .3s ease, background .3s ease; }
 .button:hover { transform: translateY(-4px); }
 .primary-button { color: var(--white); background: linear-gradient(135deg, #ad625a, #87453e); box-shadow: 0 14px 30px rgba(99,46,41,.27); }
@@ -443,4 +454,387 @@ dialog::backdrop { background: rgba(57,31,28,.62); backdrop-filter: blur(8px); }
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     .reveal { opacity: 1; transform: none; }
+}
+
+
+.signature-brand{
+font-family: Georgia, serif;
+font-size:1rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#8a5b63;
+margin-bottom:14px;
+font-weight:500;
+}
+.signature-brand strong{
+font-size:1.45rem;
+font-weight:700;
+letter-spacing:1px;
+}
+
+
+/* SON PROFESYONEL DOKUNUŞLAR */
+.service-card::before { content: ""; position: absolute; z-index: 4; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 28%, rgba(255,255,255,.28) 45%, transparent 62%); transform: translateX(-120%); transition: transform .9s cubic-bezier(.22,1,.36,1); }
+.service-card:hover::before { transform: translateX(120%); }
+.service-grid .service-card:nth-child(2) { transition-delay: .05s; }
+.service-grid .service-card:nth-child(3) { transition-delay: .1s; }
+.service-grid .service-card:nth-child(4) { transition-delay: .05s; }
+.service-grid .service-card:nth-child(5) { transition-delay: .1s; }
+.service-grid .service-card:nth-child(6) { transition-delay: .15s; }
+.map-card { background: #ead8d2; border: 1px solid rgba(126,72,65,.14); }
+.map-vignette { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, rgba(255,255,255,.05), transparent 58%, rgba(80,36,33,.12)); }
+.map-note { align-items: center; }
+.map-note div { flex: 1; }
+.map-note a { margin-left: auto; padding: 12px 15px; border-radius: 999px; color: white; background: var(--rose-800); font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: transform .25s ease, background .25s ease; }
+.map-note a:hover { transform: translateY(-2px); background: var(--rose-950); }
+.map-note a b { margin-left: 5px; }
+@keyframes signatureLine { to { transform: scaleX(1); } }
+@media (max-width: 1050px) and (min-width: 701px) {
+  .hero-copy { left: 5%; width: min(520px, 54vw); padding: 28px; }
+  .hero-copy h1 { font-size: clamp(42px, 5.6vw, 62px); }
+}
+@media (max-width: 700px) {
+  .hero-copy { margin-top: calc(clamp(520px,72svh,680px) - 126px); padding: 25px 20px 22px; }
+  .hero-signature { margin: 0 auto 16px; text-align: left; }
+  .hero-signature strong { font-size: 27px; }
+  .hero-kicker { font-size: 8px; letter-spacing: 2.4px; }
+  .hero-copy h1 { font-size: clamp(38px, 12vw, 54px); }
+  .hero-description { margin-top: 16px; font-size: 13px; }
+  .hero-trust { justify-content: center; gap: 8px 14px; }
+  .map-note { left: 14px; right: 14px; bottom: 14px; padding: 14px; }
+  .map-note a { padding: 10px 12px; font-size: 8px; }
+}
+.navbar { transition: padding .3s ease, background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease; }
+.navbar.navbar-scrolled { background: rgba(255,248,245,.82); backdrop-filter: blur(16px); box-shadow: 0 8px 28px rgba(83,38,34,.1); }
+@media (min-width: 1051px) { .hero-background { translate: 0 var(--hero-scroll, 0); } }
+
+/* HERO METİNLERİNİ GÖRSELE GÖMME — kart/popup görünümü kaldırıldı */
+.hero-copy {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+}
+.hero-copy::before,
+.hero-copy::after {
+    content: none;
+}
+.hero-signature,
+.hero-kicker,
+.hero-copy h1,
+.hero-description,
+.hero-trust {
+    text-shadow: 0 2px 14px rgba(255, 248, 244, .95), 0 1px 2px rgba(255, 255, 255, .9);
+}
+.hero-copy h1 {
+    text-shadow: 0 2px 18px rgba(255, 247, 242, .98), 0 1px 2px rgba(255, 255, 255, .95);
+}
+.hero-description {
+    text-shadow: 0 2px 15px rgba(255, 249, 246, .98), 0 1px 2px rgba(255, 255, 255, .95);
+}
+.hero-trust {
+    border-top-color: rgba(112, 61, 55, .24);
+}
+.outline-button {
+    background: rgba(255, 249, 246, .72);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+@media (max-width: 1050px) and (min-width: 701px) {
+    .hero-copy {
+        padding: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        min-height: clamp(620px, 88svh, 760px);
+        padding-bottom: 0;
+    }
+    .hero-background,
+    .hero-shade {
+        height: 100%;
+    }
+    .hero-shade {
+        background:
+            linear-gradient(to bottom, rgba(255,239,233,.01) 0%, rgba(255,239,233,.03) 43%, rgba(255,242,237,.68) 72%, rgba(255,242,237,.88) 100%),
+            linear-gradient(90deg, rgba(255,248,244,.2), transparent 65%);
+    }
+    .hero-copy {
+        position: absolute;
+        z-index: 15;
+        left: 20px;
+        right: 20px;
+        bottom: 38px;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        box-shadow: none;
+        text-align: left;
+        transform: none;
+    }
+    .hero-signature {
+        margin: 0 0 14px;
+    }
+    .hero-description {
+        max-width: 34ch;
+        margin: 15px 0 0;
+    }
+    .hero-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .button {
+        width: auto;
+        flex: 1 1 145px;
+    }
+    .hero-trust {
+        justify-content: flex-start;
+    }
+}
+
+/* Mobil hero düzeni: kadın görselini metnin altında bırakmadan görünür tutar */
+@media (max-width: 700px) {
+    .hero {
+        min-height: auto;
+        padding-bottom: 26px;
+        background: #f8e5df;
+    }
+
+    .hero-background,
+    .hero-shade {
+        inset: 0 0 auto;
+        height: clamp(500px, 67svh, 620px);
+    }
+
+    .hero-background {
+        background-size: auto 100%;
+        background-position: center top;
+    }
+
+    .hero-shade {
+        background:
+            linear-gradient(to bottom,
+                rgba(255, 239, 233, 0) 0%,
+                rgba(255, 239, 233, 0) 72%,
+                rgba(248, 229, 223, .52) 88%,
+                #f8e5df 100%);
+    }
+
+    .hero-copy {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: auto;
+        margin: calc(clamp(500px, 67svh, 620px) - 140px) 20px 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .hero-signature,
+    .hero-kicker,
+    .hero-copy h1,
+    .hero-description,
+    .hero-trust {
+        text-shadow: none;
+    }
+}
+
+/* Son mobil hero rötuşu: imzayı küçültür, metin grubunu çene hizasına taşır */
+@media (max-width: 700px) {
+    .hero-copy {
+        margin: calc(clamp(500px, 67svh, 620px) - 220px) 20px 0;
+    }
+
+    .hero-signature {
+        margin: 0 0 9px;
+        gap: 0;
+    }
+
+    .hero-signature span {
+        font-size: 13px;
+        letter-spacing: .65px;
+    }
+
+    .hero-signature strong {
+        font-size: 23px;
+        line-height: .98;
+    }
+
+    .hero-signature i {
+        margin-top: 6px;
+    }
+
+    .hero-kicker {
+        margin-bottom: 7px;
+        font-size: 7.5px;
+        letter-spacing: 2.1px;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(36px, 11vw, 49px);
+        line-height: .93;
+    }
+
+    .hero-description {
+        margin-top: 12px;
+    }
+
+    .hero-buttons {
+        margin-top: 16px;
+    }
+}
+
+/* TESLİM MOBİL HERO — tüm metin görselin içinde, başlık çizginin üstünde */
+@media (max-width: 700px) {
+    .hero {
+        position: relative;
+        min-height: clamp(790px, 100svh, 900px);
+        padding-bottom: 0;
+        background: #f5d8d1;
+    }
+
+    .hero-background,
+    .hero-shade {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-background {
+        background-size: auto 100%;
+        background-position: center top;
+    }
+
+    .hero-shade {
+        background:
+            linear-gradient(to bottom,
+                rgba(255, 241, 236, 0) 0%,
+                rgba(255, 241, 236, 0) 46%,
+                rgba(246, 218, 211, .13) 56%,
+                rgba(246, 218, 211, .72) 72%,
+                rgba(246, 218, 211, .94) 100%),
+            linear-gradient(90deg,
+                rgba(255, 248, 244, .10) 0%,
+                rgba(255, 248, 244, 0) 70%);
+    }
+
+    .hero-copy {
+        position: absolute;
+        z-index: 15;
+        left: 20px;
+        right: 20px;
+        bottom: 22px;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        transform: none;
+    }
+
+    .hero-signature {
+        margin: 0 0 8px;
+        gap: 0;
+    }
+
+    .hero-signature span {
+        font-size: 12px;
+        letter-spacing: .55px;
+    }
+
+    .hero-signature strong {
+        font-size: 21px;
+        line-height: 1;
+    }
+
+    .hero-signature i {
+        width: 150px;
+        margin-top: 6px;
+    }
+
+    .hero-kicker {
+        margin: 0 0 7px;
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+
+    .hero-copy h1 {
+        margin: 0;
+        padding: 0 0 9px;
+        border-bottom: 1px solid rgba(121, 66, 60, .28);
+        font-size: clamp(34px, 10.4vw, 46px);
+        line-height: .92;
+    }
+
+    .hero-copy h1 em {
+        display: block;
+        margin-top: 2px;
+    }
+
+    .hero-description {
+        max-width: 36ch;
+        margin: 10px 0 0;
+        font-size: 12.5px;
+        line-height: 1.45;
+    }
+
+    .hero-buttons {
+        margin-top: 14px;
+        gap: 9px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .hero-buttons .button {
+        min-height: 46px;
+        flex: 1 1 0;
+        padding: 0 12px;
+        font-size: 8px;
+        white-space: nowrap;
+    }
+
+    .hero-trust {
+        margin-top: 12px;
+        padding-top: 10px;
+        gap: 7px 12px;
+        font-size: 7.5px;
+    }
+
+    .hero-signature,
+    .hero-kicker,
+    .hero-copy h1,
+    .hero-description,
+    .hero-trust {
+        text-shadow: 0 1px 8px rgba(255, 247, 243, .72);
+    }
+}
+
+@media (max-width: 390px) {
+    .hero {
+        min-height: 760px;
+    }
+
+    .hero-copy {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(31px, 10.1vw, 40px);
+    }
+
+    .hero-description {
+        font-size: 11.5px;
+    }
 }
