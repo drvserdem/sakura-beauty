@@ -246,21 +246,28 @@ dialog::backdrop { background: rgba(57,31,28,.62); backdrop-filter: blur(8px); }
 .dialog-shell, .admin-shell { position: relative; max-height: calc(100svh - 28px); overflow: auto; border-radius: 34px; background: #fffaf8; box-shadow: 0 40px 120px rgba(43,20,18,.35); animation: dialogReveal .35s cubic-bezier(.22,1,.36,1); }
 .dialog-shell { display: grid; grid-template-columns: 1.35fr .65fr; }
 .dialog-close { position: absolute; z-index: 5; top: 18px; right: 18px; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; color: var(--rose-900); background: rgba(255,255,255,.82); box-shadow: var(--shadow-sm); font-size: 25px; }
-.booking-form-side { padding: 50px; }
+.booking-form-side { padding: 50px; color: #452a27; }
 .dialog-heading > span, .admin-login > span, .admin-header span { color: var(--rose-600); font-size: 9px; font-weight: 600; letter-spacing: 3px; }
 .dialog-heading h2, .admin-login h2, .admin-header h2 { margin-top: 10px; font-family: var(--serif); font-size: clamp(38px, 4vw, 54px); font-weight: 500; line-height: 1; color: var(--rose-900); }
 .dialog-heading p, .admin-login > p { max-width: 58ch; margin-top: 12px; color: var(--muted); font-size: 11px; line-height: 1.7; }
 .booking-form-side form { margin-top: 32px; }
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.field { display: grid; gap: 8px; }
+.booking-form-side .dialog-heading p { color: #725b57; font-size: 12px; font-weight: 500; line-height: 1.65; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.field { display: grid; grid-template-rows: auto 48px 11px; gap: 8px; align-self: start; }
 .field-full { grid-column: 1 / -1; }
-.field > span, .time-fieldset legend { color: var(--rose-900); font-size: 9px; font-weight: 600; letter-spacing: .6px; }
-.field em { color: var(--muted); font-size: 8px; font-style: normal; font-weight: 400; }
-.field input, .field select, .field textarea { width: 100%; padding: 14px 15px; border: 1px solid var(--border); border-radius: 13px; outline: 0; background: white; font-size: 11px; transition: border-color .25s ease, box-shadow .25s ease; }
-.field textarea { resize: vertical; }
-.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--rose-600); box-shadow: 0 0 0 3px rgba(185,107,98,.12); }
+.field > span, .time-fieldset legend { color: var(--rose-900); font-size: 11px; font-weight: 700; letter-spacing: .35px; line-height: 1.25; }
+.field em { color: #846e6a; font-size: 9px; font-style: normal; font-weight: 500; }
+.field input, .field select, .field textarea { width: 100%; min-height: 48px; padding: 14px 16px; border: 1px solid #dfcfcc; border-radius: 13px; outline: 0; background: #fff; color: #442d2a; font-size: 12px; font-weight: 500; line-height: 1.35; box-shadow: 0 1px 0 rgba(117,64,57,.03); transition: border-color .25s ease, box-shadow .25s ease, background-color .25s ease; }
+.field textarea { min-height: 76px; resize: vertical; }
+.field input::placeholder, .field textarea::placeholder { color: #857773; opacity: 1; font-weight: 400; }
+.field select { cursor: pointer; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--rose-600); background: #fffdfc; box-shadow: 0 0 0 3px rgba(185,107,98,.14), 0 8px 22px rgba(117,64,57,.06); }
 .field.invalid input, .field.invalid select, .field.invalid textarea { border-color: #b53f3f; }
-.field-error { min-height: 11px; color: #a13d3d; font-size: 8px; }
+.field-error { min-height: 11px; color: #a13d3d; font-size: 9px; font-weight: 500; line-height: 1.2; }
+.time-fieldset legend { margin-bottom: 7px; }
+.time-fieldset > p { color: #78635f; font-size: 10px; font-weight: 500; line-height: 1.5; }
+.privacy-check span { color: #6f5d59; font-size: 9px; font-weight: 500; line-height: 1.45; }
+.booking-submit { min-height: 50px; font-weight: 700; letter-spacing: .8px; }
 .time-fieldset { margin: 22px 0; padding: 0; border: 0; }
 .time-fieldset legend { margin-bottom: 10px; }
 .time-fieldset > p { margin-bottom: 10px; color: var(--muted); font-size: 9px; }
