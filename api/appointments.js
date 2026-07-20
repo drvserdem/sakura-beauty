@@ -1,9 +1,9 @@
 const KEY = "sakura:appointments:v1";
 const SERVICES = {
     "Cilt Bakımı": 75,
-    "Kalıcı Makyaj": 120,
-    "Kaş ve Kirpik": 60,
-    "Hydrafacial": 60,
+    "G5 Masajı": 45,
+    "Protez Tırnak": 120,
+    "Manikür - Pedikür": 90,
     "İpek Kirpik": 90,
     "Ücretsiz Ön Görüşme": 20
 };

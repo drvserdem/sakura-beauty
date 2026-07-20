@@ -7,13 +7,13 @@
     const DEMO_ADMIN_CODE = "2468";
     const API_URL = "/api/appointments";
     const SERVICES = {
-        "Cilt Bakımı": 75,
-        "Kalıcı Makyaj": 120,
-        "Kaş ve Kirpik": 60,
-        "Hydrafacial": 60,
-        "İpek Kirpik": 90,
-        "Ücretsiz Ön Görüşme": 20
-    };
+    "Cilt Bakımı": 75,
+    "G5 Masajı": 45,
+    "Protez Tırnak": 120,
+    "Manikür - Pedikür": 90,
+    "İpek Kirpik": 90,
+    "Ücretsiz Ön Görüşme": 20
+};
     const WEEKDAY_SLOTS = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"];
     const SATURDAY_SLOTS = ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
 
