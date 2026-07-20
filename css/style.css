@@ -851,3 +851,20 @@ letter-spacing:1px;
         bottom: 54px;
     }
 }
+
+/* MOBİL HERO GÖRSEL ORANI — masaüstü kompozisyonuna yaklaşır, aşırı yakınlaştırmayı kaldırır */
+@media (max-width: 700px) {
+    .hero-background {
+        background-size: 215% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #f5d8d1;
+        transform: none;
+    }
+}
+
+@media (max-width: 390px) {
+    .hero-background {
+        background-size: 225% auto;
+    }
+}
